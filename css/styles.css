@@ -1,0 +1,359 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Signika+Negative:wght@300..700&display=swap");
+body,
+div,
+ul,
+li,
+a,
+h1,
+h2,
+h3,
+h4,
+p,
+footer,
+main,
+nav,
+header,
+ul,
+label,
+section {
+  padding: 0;
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Montserrat;
+}
+:root {
+  --bg__team: #5b3570;
+  --bg__footer: #1e1e1e;
+  --bg__services: #f1e4de;
+}
+section[id] {
+  scroll-margin-top: 80px;
+}
+/** HEADER y NAVBAR **/
+header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 99;
+  background-color: rgb(91, 53, 112);
+}
+#chk1 {
+  display: none;
+}
+i {
+  color: #fff;
+  cursor: pointer;
+}
+header .logo {
+  flex: 1;
+  color: #fff;
+  margin-left: 50px;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+header ul {
+  flex: 2;
+  display: flex;
+  justify-content: space-evenly;
+}
+header ul li {
+  list-style: none;
+}
+header ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 10px 15px;
+}
+header ul li a:hover {
+  border-bottom: 2px solid cadetblue;
+}
+header .menu {
+  font-size: 2.5em;
+  display: none;
+}
+.encabezado-img {
+  position: relative;
+  width: 100%;
+  height: 570px;
+  background-image: url(../IMG/header.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.encabezado-img::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+.encabezado-img h1 {
+  position: relative;
+  z-index: 2;
+  padding-top: 20%;
+  font-family: "Signika Negative", sans-serif;
+  font-size: 40px;
+  text-transform: uppercase;
+  color: #f1e4de;
+  text-align: center;
+  text-wrap: balance;
+}
+/** ESTILOS DEL BOTÓN DEL HEADER **/
+.encabezado-img .header-button {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin-top: 70px;
+}
+
+.header-button .btn {
+  background: linear-gradient(to right, #834d9b, #d04ed6);
+  color: #fff;
+  padding: 15px 50px;
+  text-decoration: none;
+  border-radius: 70px;
+  font-weight: bold;
+}
+
+/** SECCIÓN HORARIO **/
+.fila-horario-caja {
+  margin: 30px;
+}
+.fila-horario-caja p {
+  padding: 16px;
+  text-align: center;
+}
+
+/** SECCIÓN DE BIENVENIDA **/
+#seccion__bienvenida {
+  background-color: var(--bg__services);
+}
+.fila-bienvenida,
+.fila-horario,
+.fila-trabajos,
+.fila-contacto,
+.fila-tarjetas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.fila-bienvenida-caja img {
+  min-width: 100%;
+  height: auto;
+}
+.fila-bienvenida-caja {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+.fila-bienvenida-caja p {
+  line-height: 1.5;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 20px;
+}
+
+/** SECCIÓN ÚLTIMOS TRABAJOS **/
+#seccion__trabajos {
+  padding: 20px 0;
+  background-color: #9f969686;
+}
+.trabajos {
+  margin: 20px 10px;
+  width: 280px;
+  height: auto;
+  border-radius: 8px;
+}
+.contenedor__trabajos h2 {
+  margin-bottom: 20px;
+}
+.fila-trabajos img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.4);
+}
+.carousel-image {
+  max-width: 40%; /* Ajusta el tamaño deseado */
+  height: auto;   /* Mantiene la relación de aspecto */
+  margin: 0 auto; /* Centra las imágenes dentro del carrusel */
+}
+
+/** ENCABEZADOS DE SECCIONES **/
+h2 {
+  text-align: center;
+  padding-top: 40px;
+  font-size: 36px;
+  font-weight: 700;
+}
+.detalle__servicio,
+.detalle__tarjeta p {
+  font-weight: 400;
+  font-size: 16px;
+  color: #9f9696;
+}
+
+/** SECCIÓN SERVICIOS **/
+#seccion__servicios {
+  background-color: var(--bg__services);
+}
+.contenedor__servicios {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 32px;
+  padding: 32px;
+}
+.tarjeta__servicio {
+  border-radius: 6px;
+  background-color: #fff;
+  text-wrap: pretty;
+}
+.tarjeta__servicio img {
+  max-width: 100%;
+  border-radius: 6px 6px 0 0;
+  overflow: hidden;
+  display: block;
+}
+.detalle__servicio h3 {
+  font-weight: 600;
+  font-size: 20px;
+  color: #5b3570;
+  padding-bottom: 8px;
+}
+.detalle__servicio p {
+  padding-bottom: 10px;
+}
+.detalle__servicio span {
+  color: #605dec;
+}
+.detalle__servicio {
+  margin: 24px;
+}
+
+/** SECCION DE CONTACTOS **/
+.fila-contacto-caja {
+  width: 300px;
+  text-align: center;
+}
+.contenedor__contacto {
+  padding: 32px;
+}
+.fila-contacto-caja {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin: 20px;
+}
+.img-contacto img {
+  width: 100px;
+}
+.fila-contacto-caja {
+  padding: 20px;
+}
+
+/** SECCIÓN EQUIPO DE TRABAJO **/
+#seccion__team {
+  background-color: var(--bg__team);
+}
+.header__team {
+  color: #dadada;
+}
+.tarjeta__team {
+  width: clamp(280px, 100%, 300px);
+  background-color: var(--bg__services);
+  margin: 30px 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.tarjeta__trabajadora img {
+  width: 100%;
+  display: block;
+  border-top-left-radius: 10px;
+  overflow: hidden;
+  border-top-right-radius: 10px;
+}
+.detalle__tarjeta {
+  padding: 20px;
+}
+.detalle__tarjeta p {
+  padding-top: 8px;
+}
+.detalle__tarjeta h4 {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+  display: block;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+.detalle__tarjeta strong {
+  color: #8a2f8a;
+}
+
+/** FOOTER **/
+footer {
+  background-color: var(--bg__footer);
+  text-align: center;
+  color: #fff;
+  padding: 40px;
+}
+
+/** MEDIAS QUERIES **/
+@media (max-width: 1000px) {
+  header ul {
+    position: fixed;
+    top: 100px;
+    right: -100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: calc(100vh - 100px);
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    transition: right 0.5s linear;
+  }
+  header .menu {
+    display: block;
+    width: 100px;
+    text-align: center;
+  }
+  #chk1:checked ~ ul {
+    right: 0;
+  }
+  .fila-bienvenida-caja {
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .header .logo {
+    font-size: 10px;
+    margin-left: 8px;
+  }
+  .header ul {
+    width: 100%;
+  }
+  .fila-bienvenida-caja p {
+    padding: 0 20px;
+    margin-bottom: 20px;
+  }
+  .encabezado-img h1 {
+    font-size: 28px;
+    padding-top: 60%;
+    text-align: center;
+  }
+}

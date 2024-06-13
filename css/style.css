@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+body,div,ul,li,a,h1,h2,h3,h4,p,footer,main,section {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: Montserrat;
+}
+:root {
+  --bg__team: #5b3570;
+  --bg__footer: #1e1e1e;
+  --bg__services: #f1e4de;
+}
+
+/** SECCIÓN HORARIO **/
+.fila-horario-caja {
+  margin: 50px;
+}
+.fila-horario-caja p {
+  padding: 16px;
+  text-align: center;
+}
+
+/** SECCIÓN DE BIENVENIDA **/
+#seccion__bienvenida {
+  background-color: var(--bg__services);
+}
+.fila-bienvenida, .fila-horario, .fila-trabajos, .fila-contacto, .fila-tarjetas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.fila-bienvenida-caja img {
+  width: 100%;
+  min-width: 300px;
+  height: 100%;
+}
+.fila-bienvenida-caja {
+  flex: 1;
+  margin: 0 32px 0 0;
+}
+.fila-bienvenida-caja p {
+  margin-top: 32px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+/** SECCIÓN ÚLTIMOS TRABAJOS **/
+#seccion__trabajos {
+  padding: 20px 0;
+}
+.trabajos { 
+  margin: 20px 10px;
+  width: 280px;
+  height: auto;
+}
+.contenedor__trabajos h2 {
+  margin-bottom: 20px;
+}
+.fila-trabajos img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+/** ENCABEZADOS DE SECCIONES **/
+h2 {
+  text-align: center;
+  padding-top: 40px;
+  font-size: 36px;
+  font-weight: 700;
+}
+.detalle__servicio, .detalle__tarjeta p {
+  font-weight: 400;
+  font-size: 16px;
+  color: #9f9696;
+}
+
+/** SECCIÓN SERVICIOS **/
+#seccion__servicios {
+  background-color: var(--bg__services);
+}
+.contenedor__servicios {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 32px;
+  padding: 32px;
+}
+.tarjeta__servicio {
+  border-radius: 6px;
+  background-color: #fff;
+  text-wrap: pretty;
+}
+.tarjeta__servicio img {
+  max-width: 100%;
+  border-radius: 6px 6px 0 0;
+  overflow: hidden;
+  display: block;
+}
+.detalle__servicio h3 {
+  font-weight: 600;
+  font-size: 20px;
+  color: #5b3570;
+}
+.detalle__servicio span {
+  color: #605dec;
+}
+.detalle__servicio {
+  margin: 24px;
+}
+.detalle__servicio p {
+  margin-top: 8px;
+}
+
+/** SECCION DE CONTACTOS **/
+.fila-contacto-caja {
+  width: 300px;
+  text-align: center;
+}
+.contenedor__contacto {
+  padding: 32px;
+}
+
+/** SECCIÓN EQUIPO DE TRABAJO **/
+#seccion__team {
+  background-color: var(--bg__team);
+}
+.header__team{
+  color: #dadada;
+}
+.tarjeta__team {
+  width: clamp(280px, 100%, 300px);
+  background-color: var(--bg__services);
+  margin: 30px 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.tarjeta__trabajadora img {
+  width: 100%;
+  display: block;
+  border-top-left-radius: 10px;
+  overflow: hidden;
+  border-top-right-radius: 10px;
+}
+.detalle__tarjeta {
+  padding: 20px;
+}
+.detalle__tarjeta h4 {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+.detalle__tarjeta span {
+  display: block;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+.detalle__tarjeta strong {
+  color: #8a2f8a;
+}
+
+/** FOOTER **/
+footer{
+  background-color: var(--bg__footer);
+  text-align: center;
+  color: #fff;
+  padding: 40px;
+}
